@@ -1,0 +1,33 @@
+videos:
+  - 
+    id: 1
+    name: 'Roberto Roleta ensina raspagem helicóptero no Jiu-Jitsu' 
+    url: 'https://youtu.be/j8X28tyBM14'
+    urlEmbed: 'https://www.youtube.com/embed/j8X28tyBM14'
+    duration: '2:04'
+    channel: 'GRACIEMAG'
+    thumbnail: 'http://i3.ytimg.com/vi/j8X28tyBM14/maxresdefault.jpg'
+    position:
+      type: 'Raspagem'
+      name: 'Raspagem Helicóptero'
+  - id: 2
+    name: 'Jiu Jitsu - 557/QG - Raspagem da Guarda De La Riva - De La Riva Sweep' 
+    url: 'https://youtu.be/lU_AL-EjRdM'
+    urlEmbed: 'https://www.youtube.com/embed/j8X28tyBM14'
+    duration: '3:21'
+    channel: 'André Machado BJJ'
+    thumbnail: 'http://i3.ytimg.com/vi/lU_AL-EjRdM/maxresdefault.jpg'
+    position:
+      type: 'Raspagem'
+      name: 'Raspagem da Guarda De La Riva'
+  - id: 3
+    name: '#Siga_O_Roger. Aprenda uma raspagem básica' 
+    url: 'https://youtu.be/ZBvQErFJ8Ts'
+    urlEmbed: 'https://www.youtube.com/embed/j8X28tyBM14'
+    duration: '2:51'
+    channel: 'Dojjo'
+    thumbnail: 'http://i3.ytimg.com/vi/ZBvQErFJ8Ts/maxresdefault.jpg'
+    position:
+      type: 'Raspagem'
+      name: 'Raspagem Guarda Fechada'
+    

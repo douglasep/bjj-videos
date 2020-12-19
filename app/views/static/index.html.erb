@@ -1,0 +1,3 @@
+<%- static_videos = HashWithIndifferentAccess.new(YAML.load_file(Rails.root.join('static_data', 'videos.yml').to_s))['videos'] %>
+
+<%= react_component 'Videos/index', { videos: static_videos.as_json } %>
