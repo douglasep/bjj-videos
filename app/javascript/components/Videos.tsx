@@ -1,5 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+
+interface Video {
+  url: string
+}
+
+interface StateVideos {
+  videos: Array<Video>
+}
+
+type State = Readonly<StateVideos>
 
 class Videos extends React.Component {
   constructor(props) {
@@ -8,17 +18,18 @@ class Videos extends React.Component {
       videos: []
     };
   }
-  componentDidMount() {
-    const url = "/v1/videos/index";
-    fetch(url)
-      .then(response => {
-        if (response.ok) {
-          return response.json();
-        }
-        throw new Error("A resposta da rede não está ok");
-      })
-      .then(response => this.setState({ videos: response }))
-      .catch(() => this.props.history.push("/"));
+
+    componentDidMount() {
+      const url = "/v1/videos/index";
+      fetch(url)
+        .then(response => {
+          if (response.ok) {
+            return response.json();
+          }
+          throw new Error("A resposta da rede não está ok");
+        })
+        .then(response => this.setState({ videos: response }))
+        .catch();
     }
     render() {
         const { videos } = this.state;
@@ -53,9 +64,11 @@ class Videos extends React.Component {
               <div className="container py-5">
                 <h1 className="display-6">Encontramos posições do dia para você!</h1>
                 <p className="lead text-muted">
-                  Treine essas posições de <span className="blue">
+                  Treine essas posições de 
+                  <span className="blue">
                     {videos.length > 0 ? videos[0].position.type : ''} 
-                  </span> hoje mesmo 
+                  </span> 
+                  hoje mesmo 
                 </p>
               </div>
             </section>

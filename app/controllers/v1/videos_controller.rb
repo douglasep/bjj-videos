@@ -11,7 +11,7 @@ class V1::VideosController < ApplicationController
     # render component: 'Video', props: { video: @static_videos.find { |video| video[:id] == videos_params['id'].to_i } }
   end
 
-    private
+  private
 
   def videos_params
     params.permit(:id, :name, :url, :duration, :channel, :position)
